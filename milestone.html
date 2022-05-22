@@ -1,0 +1,589 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Milestone College</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <style media="screen">
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-family:arial;
+        text-decoration: none;
+        background:url(img/body.png);
+
+        }
+        .logo{
+        background: linear-gradient(-45deg, rgba(34,56,74,1) 0%, rgba(66,101,124,1) 37%, rgba(156,214,225,1) 100%);
+        height:155px;
+        }
+        .tag-line{
+        padding-top:35px;
+        width:450px;
+        text-align: center;
+        margin-left: -25px;
+
+        }
+
+        .logo-img{
+        margin-left:25px;
+        }
+        .tag-line a{
+          text-decoration: none;
+        }
+        .tag-line  p{
+        line-height: 0px !important;
+        margin-top: 5px !important;
+        color: #8088E6;
+        text-shadow: 1px 1px 4px #21252B;
+
+        }
+
+        .logo h1{
+        margin:0;
+        color: #452A76;
+        text-decoration: none;
+        text-shadow: 2px 2px 6px #21252B;
+
+        }
+        .logo-img img{
+        width:100px;
+        height: 100px;
+        float: left;
+        margin-top: 10px;
+        margin-left: 12px;
+        }
+
+        .mar{
+        font:arial;
+        font-size: 26px;
+        color:#442975;
+
+        }
+        .slider img{
+        margin: none;
+        padding: none;
+        decoration:none;
+        width:100%;
+        height:auto;
+
+        }
+        /* New menu design  */
+
+        .menu {
+        background: linear-gradient(180deg, #79AAB9 0%, #60899B 100%);
+        }
+        .menu ul{
+        padding:0;
+        margin:0;
+        text-align: center;
+        list-style: none;
+
+        }
+        .menu > ul > li{
+        display:inline-block;
+        padding: 6px 6px;
+        position:relative;
+        }
+        .menu ul li a{
+        display:block;
+        padding: 5px 120px;
+        text-decoration:none;
+        color:#422B72;
+        transition: 0.5s;
+        }
+        .menu ul li a:hover{
+          background:#95CCD9;
+          text-shadow:2px 2px 5px #422C72 ;
+          color: #E4F9D0;
+        }
+
+
+
+
+        /*Sub menu css*/
+
+        .menu ul li ul{
+        position:absolute;
+        top:100%;
+        left:0;
+        background: #6893A4;
+        width:350px;
+        display: none;
+        opacity: .9;
+        text-align: left;
+        }
+
+        .menu ul li:hover ul{
+        display:block;
+        visibility: visible !important;
+        z-index: 100;
+
+        }
+        .menu ul li ul a{
+        border-bottom: 1px solid #6B98A9;
+
+        }
+
+        .menu ul li ul a:hover{
+        background:#95CCD9;
+        text-shadow:2px 2px 5px #422C72 ;
+        color: #E4F9D0;
+        }
+        /*testimonial*/
+        .container .imgbox img{
+        width:auto;
+        height: 150px;
+
+        }
+        .container{
+        width: 100%;
+        margin:0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 20px;
+        box-sizing:border-box;
+        padding: 20px;
+        margin-top: 70px;
+        }
+        .container .box{
+        position: relative;
+        padding:80px 40px 40px;
+        transition: 0.5s;
+        text-align: center;
+        background: #3E677E;
+        }
+        .container .box:hover{
+        background: rgb(34,56,74);
+        background: linear-gradient(-45deg, rgba(34,56,74,1) 0%, rgba(66,101,124,1) 37%, rgba(156,214,225,1) 100%);
+        box-shadow: 5px 5px 30px #000000;
+        transition: 0.5s;
+        }
+
+        .container .box p{
+        margin: 0;
+        padding: 0;
+        transition: 0.5s;
+        text-align: justify;
+        }
+
+        .container .box h4{
+        margin: 20px 0 0;
+        padding: 0;
+        transition: 0.5s;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: #fff;
+        display: none;
+
+        }
+        .container .box h4 span{
+        font-weight: 600;
+        font-size: 14px;
+        transition: 0.5s;
+        }
+        .container .box:hover h4{
+        color: #573F83;
+        display: block;
+         text-shadow: 2px 2px 3px #000000;
+        }
+        .container .box:hover p{color:#fff;
+           text-shadow: 2px 2px 4px #000000;}
+        .container .box:hover h4 span{
+        color:#8088E6;
+        }
+        .container .box .imgbox{
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        }
+
+        .container .box:before{
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: 40px;
+        width: 90px;
+        height: 80px;
+        background: url(img/quotes.png);
+        background-size: cover;
+        opacity:0.005;
+        pointer-events: none;
+        transition: 0.5s;
+        }
+
+        .container .box:hover:before{
+        transform: translateY(-60px);
+        opacity: 1;
+        }
+
+        .container .box:after{
+        content: '';
+        position: absolute ;
+        bottom: 20px;
+        left: 40px;
+        width: 90px;
+        height: 80px;
+        background: url(img/quotes.png);
+        background-size: cover;
+        opacity:0.005;
+        pointer-events: none;
+        transition: 0.5s;
+        transform: rotate(180deg) translateY(0px);
+        }
+
+        .container .box:hover:after{
+        transform: rotate(180deg) translateY(-60px);
+        opacity: 1;
+        }
+        @media (max-width:768px){
+        .container .box{
+        margin-top:80px;
+        transition: 0.5s
+        }
+        }
+
+        /*footer*/
+        .container2{
+        background-color: #3A5B6F;
+        overflow: hidden;
+        margin-top: 25px;
+        }
+        .mls-title{
+        padding-top: 15px;
+        padding-left: 170px;
+        margin: 0;
+        color: #fff;
+        font-size:24px;
+        opacity: 100;
+        }
+        .col-sm-4 {
+        width: 335px;
+        border-right: 1px solid #878787;
+        display: inline-block;
+        }
+        .row{
+        margin-left:150px;
+        }
+
+        .col-sm-4-br1 ul{
+        padding:0;
+        margin:0;
+        list-style: none;
+        width: 380px;
+        border-right: 1px solid #fff;
+        opacity: 100;
+
+
+
+        }
+        .col-sm-4-br1{
+        margin: 0;
+        padding: 0;
+        float: left;
+        }
+        .container2 .row .col-sm-4-br1  ul li{
+        padding: 6px 6px;
+        position:relative;
+        }
+        .container2 .row .col-sm-4-br1 ul li a{
+        display:block;
+        padding: 5px 15px;
+        text-decoration:none;
+        color:#fff;
+        transition: 0.5s;
+        opacity: 100;
+        }
+        .container2 .row .col-sm-4-br1 ul li a:hover{
+        background:#E4F9D0;
+        color: black;
+        }
+        .col-sm-4 ul{
+        padding:0;
+        margin:0;
+        list-style: none;
+        width: 380px;}
+        .col-sm-4{
+        margin: 0;
+        padding: 0;
+        float: right;
+        }
+        .container2 .row .col-sm-4  ul li{
+        padding: 6px 6px;
+        position:relative;
+        }
+        .container2 .row .col-sm-4 ul li a{
+         display:block;
+         padding: 5px 15px;
+         text-decoration:none;
+         color:#fff;
+         transition: 0.5s;
+         opacity: 100;
+        }
+        .container2 .row .col-sm-4 ul li a:hover{
+        background:#E4F9D0;
+        color: black;
+        }
+        .container2 .row .col-sm-4-br1 h4{
+        color: #fff;
+        padding: 21px;
+        opacity: 100;
+        }
+        .container2 .row .col-sm-4 h4{
+        color: #fff;
+        padding: 21px;
+        opacity: 100;
+        }
+        .footer-bottom {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          background: #2B4558;
+          color: #fff;
+          padding-top: 50px;
+        }
+        .all{
+          opacity: .9;
+        }
+        .footer-bottom .container3 h3{
+          margin: -34px;
+          padding: 0;
+
+        }
+        .footer-bottom .container3 .neon{
+        padding:0 470px;
+        color: #fff;
+
+        position: relative;
+        }
+        .footer-bottom .container3 .neon2{
+        padding:0 470px;
+        color: #fff;
+
+        height: 100%;
+        width: 100%;
+
+        margin-top: 12px;
+        }
+
+        .footer-bottom .container3 .neon2:hover{
+          text-shadow: 0 0 40px #BEFEFF;
+          z-index:auto;
+          position: absolute;
+        }
+        .footer-bottom .container3 .neon:hover{text-shadow: 0 0 15px #BEFEFF;
+        }
+
+    </style>
+    <script src="img/jquery.js" type="text/javascript"></script>
+    <script src="img/jquery.cycle.all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function()
+    {
+      $('.slider').cycle({
+    fx:    'fade',
+    random:  1
+});
+    }
+  );
+    </script>
+
+  </head>
+  <body>
+  <div class="all">
+    <div class="lcon">
+      <div>
+          <div class="logo">
+            <div class="logo-img">
+              <a href="#"><img src="img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="tag-line">
+              <a href="#"><h1>Milestone College</h1>
+              <p>Learn & Lead</p></a>
+            </div>
+            <div class="slide-text">
+              <div class="mar"><marquee behavior="alternate">Welcome to Milestone College - E(Boys)</marquee></div>
+            </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a>Gallery</a>
+            <ul>
+              <li><a href="http://www.milestonecollege.com/photogallery.php"target="_blank">Photo Gallery</a></li>
+              <li><a href="http://www.milestonecollege.com/videogallery.php"target="_blank">Video Gallery</a></li>
+            </ul>
+          </li>
+          <li><a>About Us</a>
+            <ul>
+              <li><a href="http://www.milestonecollege.com/page_details.php?type=page&id=66"target="_blank">Infrastructure</a></li>
+              <li><a href="http://www.milestonecollege.com/page_details.php?type=page&id=65"target="_blank">College History</a></li>
+              <li><a href="http://www.milestonecollege.com/page_details.php?type=page&id=57"target="_blank">Vision</a></li>
+              <li><a href="http://www.milestonecollege.com/page_details.php?type=page&id=68"target="_blank">Achievements</a></li>
+            </ul>
+          </li>
+          <li><a href="http://www.milestonecollege.com/page_details.php?type=page&id=37"target="_blank">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Slider part  -->
+    <div class="slider">
+      <img src="img/banner-college.jpg" alt="banner">
+      <img src="img/banner-college2.jpg" alt="banner">
+      <img src="img/banner-college3.jpg" alt="banner">
+      <img src="img/banner-college4.jpg" alt="banner">
+      <img src="img/banner-college5.jpg" alt="banner">
+      <img src="img/banner-college6.jpg" alt="banner">
+    </div>
+    <!-- Princepal image part -->
+<div class="all">
+  <div class="container">
+    <div class="box">
+      <div class="imgbox">
+        <img src="img/adviser3.jpg" alt="Adviser picture">
+      </div>
+      <p>“The exercise mentioned in this excerpt of my personal development philosophy is one of the keys to gaining clarity for what you really want in life. Start with a clear vision of your ideal life and happiness, then work backward to achieve it.”</p>
+      <h4>Coronel Nurun Nabi<br><span>Adviser</span></h4>
+
+    </div>
+    <div class="box">
+      <div class="imgbox">
+        <img src="img/adviser4.jpg" alt="Adviser picture">
+      </div>
+      <p>“All the adversity I’ve had in my life, all my troubles and obstacles, have strengthened me. You may not realize it when it happens, but a kick in the teeth may be the best thing in the world for you.”  </p>
+      <h4>Md.rakib hassan<br><span>Student</span></h4>
+
+    </div>
+    <div class="box">
+      <div class="imgbox">
+        <img src="img/adviser5.jpg" alt="Adviser picture">
+      </div>
+      <p>“Strength does not come from winning. Your struggles develop your strengths. When you go through hardships and decide not to surrender, that is strength.” </p>
+      <h4>M. Kamaluddin Bhuiyan<br><span>Principal (Admin)</span></h4>
+
+    </div>
+
+
+
+
+  </div>
+  <!--footer-->
+  <div class="container2">
+
+  			<h3 class="mls-title">MILESTONE COLLEGE</h3>
+
+  			<div class="row">
+
+  				<div class="col-sm-4-br1">
+
+  					<h4>Important Link</h4>
+
+  					<ul>
+
+
+  				      <li><a href="http://www.educationboard.gov.bd/" target="_blank">Education Board Bangladesh</a></li>
+
+
+  				      <li><a href="http://www.nu.edu.bd" target="_blank">National University</a></li>
+
+
+  				      <li><a href="http://dhakaeducationboard.portal.gov.bd/" target="_blank">Dhaka Education Borad</a></li>
+
+
+  				      <li><a href="http://www.milestonecollege.edu.bd/" target="_blank">Ministry of Public Administration</a></li>
+
+
+  				      <li><a href="http://www.dshe.gov.bd/" target="_blank"> Directorate of Secondary and Higher Education</a></li>
+
+
+  				      <li><a href="http://www.bmeb.gov.bd/" target="_blank"> Bangladesh Madrasah Education Board</a></li>
+
+
+  				      <li><a href="http://www.dpe.gov.bd/" target="_blank">Directorate of primary education</a></li>
+
+
+  				      <li><a href="http://www.mopme.gov.bd/" target="_blank">Ministry of Primary and Mass Education</a></li>
+
+
+  				    </ul>
+
+  				</div>
+
+  				<div class="col-sm-4-br1">
+
+  					<h4>Important Link</h4>
+
+  					<ul>
+
+
+  				      <li><a href="http://www.nctb.gov.bd/" target="_blank">National Curriculum &amp; Textbook Board</a></li>
+
+
+  				      <li><a href="http://www.banbeis.gov.bd/" target="_blank">Bangladesh Bureau of Educational Information and Statistics</a></li>
+
+
+  				      <li><a href="http://www.naem.gov.bd/" target="_blank">National Academy for Educational Management</a></li>
+
+
+                <li><a href="http://www.bangladesh.gov.bd/" target="_blank">National Web Portal</a></li>
+
+
+  				      <li><a href="http://mof.gov.bd/en/" target="_blank">Ministry of Finance</a></li>
+
+
+  				      <li><a href="http://www.forms.gov.bd/" target="_blank">Government Forms</a></li>
+
+
+  				      <li><a href="http://www.du.ac.bd/" target="_blank">University of Dhaka</a></li>
+
+
+  				    </ul>
+
+  				</div>
+
+  				<div class="col-sm-4">
+
+  					<h4>ADMISSION</h4>
+
+  					<ul>
+
+  						<li><a href="#">Academic Fees</a></li>
+
+  						<li><a href="#">Admission Queries(Q&amp;A)</a></li>
+
+  						<li><a href="#">Admission Procedure</a></li>
+
+  					</ul>
+
+
+
+
+  				</div>
+
+  			</div>
+        <div class="footer-bottom">
+
+  		<div class="container3">
+
+  			<h3 class="neon">Made by Rakib Hassan. Section:E(boys), Code:1516</h3>
+  			<h3 class="neon2">Made by Rakib Hassan. Section:E(boys), Code:1516</h3>
+
+  		</div>
+
+  	</div>
+  		</div>
+</div>
+  </body>
+</html>
